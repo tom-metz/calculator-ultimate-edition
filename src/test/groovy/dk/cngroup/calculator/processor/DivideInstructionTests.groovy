@@ -5,7 +5,7 @@ import spock.lang.Unroll
 
 class DivideInstructionTests extends Specification {
 
-    private Instruction instruction;
+    private Instruction instruction
 
     void setup() {
         instruction = new DivideInstruction()
@@ -41,10 +41,10 @@ class DivideInstructionTests extends Specification {
 
     void 'Division by zero should throw exception'() {
         when: 'Operand iz zero'
-        instruction.execute(4, 0);
+        instruction.execute 4, 0
 
         then: 'exception is throws'
-        thrown(IncorrectInstructionException)
+        thrown IncorrectInstructionException
     }
 
 }

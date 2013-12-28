@@ -5,7 +5,7 @@ import spock.lang.Unroll
 
 class MinusInstructionTests extends Specification {
 
-    private Instruction instruction;
+    private Instruction instruction
 
     void setup() {
         instruction = new MinusInstruction()
