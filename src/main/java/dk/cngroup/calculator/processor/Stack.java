@@ -5,17 +5,17 @@ import com.google.common.collect.ImmutableList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Stack implements Iterable<Instruction> {
+public class Stack implements Iterable<StackInstruction> {
 
-    private final ImmutableList<Instruction> instructionList;
+    private final ImmutableList<StackInstruction> stackInstructions;
 
-    Stack(List<Instruction> instructions) {
-        instructionList = new ImmutableList.Builder<Instruction>().addAll(instructions).build();
+    public Stack(List<StackInstruction> stackInstructions) {
+        this.stackInstructions = new ImmutableList.Builder<StackInstruction>().addAll(stackInstructions).build();
     }
 
     @Override
-    public Iterator<Instruction> iterator() {
-        return instructionList.iterator();
+    public Iterator<StackInstruction> iterator() {
+        return stackInstructions.iterator();
     }
 
 }
