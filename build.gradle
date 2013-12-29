@@ -2,9 +2,12 @@ import com.sun.org.apache.regexp.internal.recompile
 
 apply plugin: 'java'
 apply plugin: 'groovy'
+apply plugin: 'application'
 
 sourceCompatibility = 1.7
 version = '1.0-SNAPSHOT'
+
+mainClassName = 'dk.cngroup.calculator.Calculator'
 
 repositories {
     mavenCentral()
@@ -16,6 +19,7 @@ dependencies {
     compile 'org.reflections:reflections:0.9.9-RC1'
     compile 'com.google.guava:guava:15.0'
     compile 'commons-io:commons-io:2.4'
+    compile 'commons-cli:commons-cli:1.2'
     compile 'org.slf4j:slf4j-api:1.7.5'
     compile 'org.slf4j:slf4j-simple:1.7.5'
 
