@@ -12,12 +12,12 @@ import java.util.List;
 
 public class Compiler {
 
-    private final Logger logger = LoggerFactory.getLogger(Compiler.class);
+    private static final Logger logger = LoggerFactory.getLogger(Compiler.class);
 
     private final String operationPackage;
     private final List<String> inputLines;
 
-    Compiler(String operationPackage, List<String> inputLines) {
+    public Compiler(String operationPackage, List<String> inputLines) {
         this.operationPackage = operationPackage;
         this.inputLines = inputLines;
     }
