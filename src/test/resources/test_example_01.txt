@@ -1,0 +1,4 @@
+add 8
+multiply 3
+divide 2
+remove 6

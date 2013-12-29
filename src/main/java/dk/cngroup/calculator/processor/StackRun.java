@@ -10,7 +10,7 @@ public class StackRun {
     private final Stack stack;
     private int registerA = 0;
 
-    StackRun(Stack stack) {
+    public StackRun(Stack stack) {
         this.stack = stack;
     }
 
