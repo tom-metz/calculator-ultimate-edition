@@ -39,6 +39,10 @@ public class Compiler {
                 if (operation != null) {
                     stackInstructionList.addAll(0, operation.invokeTopStack(operationToken));
                     stackInstructionList.addAll(operation.invokeBottomStack(operationToken));
+
+                    if (operation.isExecutable()) {
+                        break;
+                    }
                 } else {
                     logger.error("Invalid operation at line {}", lineCounter);
                 }

@@ -47,7 +47,8 @@ public class OperationSuite {
             Method topStack = topStackMethods.iterator().next();
             Set<Method> bottomStackMethods = getAllMethods(operationClass, withAnnotation(BottomStack.class));
             Method bottomStack = bottomStackMethods.iterator().next();
-            OperationProxy operationProxy = new OperationProxy(operationClass, identifyOperation, topStack, bottomStack);
+            boolean executable = ((Operation)operationClass.getAnnotation(Operation.class)).execute();
+            OperationProxy operationProxy = new OperationProxy(operationClass, identifyOperation, topStack, bottomStack, executable);
             operationProxyList.add(operationProxy);
         }
 

@@ -24,6 +24,7 @@ class OperationSuiteTests extends Specification {
         StackInstruction bottomStackInstruction = bottomStackInstructions.iterator().next()
 
         then: 'expected instructions defined by the operation are included in the suite'
+        !operationProxy.isExecutable()
         8 == topStackInstruction.execute(1)
         1 == bottomStackInstruction.execute(8)
     }
