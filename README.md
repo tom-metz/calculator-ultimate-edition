@@ -26,11 +26,13 @@ Write some code to calculate a result from a set of instructions. Instructions c
 *Example 1*
 
 _Input from file_
+
     add 2
     multiply 3
     apply 3
 
 _Output to screen_
+
     15
 
 _Explanation_
